@@ -1,2 +1,2 @@
 # meteo
-Weather appp
+Weather app
