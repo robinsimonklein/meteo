@@ -5,9 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>meteo</title>
+    <title>Météo</title>
   </head>
   <body>
+
+    <main>
+        <header>
+            <div class="location_wrap"><div class="location"><img src="./img/icons/location.svg" class="location-icon"/><span>Localisation...</span></div></div>
+        </header>
+        <section id="actualForecast">
+            <div class="actualForecast_wrap">
+                <div class="actualForecast_icon"><img /></div>
+                <div class="actualForecast_temp temp">...°C</div>
+                <!-- <div class="actualForecast_tempExtreme"><span class="actualForecast_temp-min">...°C</span>|<span class="actualForecast_temp-max">...°C</span></div> -->
+                <div class="actualForecast_condition">...</div>
+                <div class="actualForecast_more">
+                    <div class="actualForecast_more_item_wrap">
+                        <div class="actualForecast_wind actualForecast_more_item">
+                            <span class="actualForecast_more_item_info">...</span>
+                            <span class="actualForecast_more_item_legend">...</span>
+                        </div>
+                    </div>
+                    <div class="actualForecast_more_item_wrap">
+                        <div class="actualForecast_humidity actualForecast_more_item">
+                            <span class="actualForecast_more_item_info">...</span>
+                            <span class="actualForecast_more_item_legend">Humidité</span>
+
+                        </div>
+                    </div>
+                    <div class="actualForecast_more_item_wrap">
+                        <div class="actualForecast_rain actualForecast_more_item">
+                            <span class="actualForecast_more_item_info">...</span>
+                            <span class="actualForecast_more_item_legend">Pluie</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
     <noscript>
       <strong>We're sorry but meteo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>

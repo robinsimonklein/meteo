@@ -1,9 +1,22 @@
-import Vue from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
+// eslint-disable-next-line
+import App from './App.vue';
 
-Vue.config.productionTip = false
+// Import all components
+import CurrentPosition from './components/geoloc';
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+// eslint-disable-next-line
+import Forecast from './components/forecast';
+
+const WeatherApp = {
+
+
+
+    init(){
+        CurrentPosition.getPosition();
+    }
+};
+
+document.addEventListener('DOMContentLoaded', WeatherApp.init());
+
+
+

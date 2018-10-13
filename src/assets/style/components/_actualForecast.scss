@@ -1,0 +1,43 @@
+#actualForecast{
+  padding: 100px 20px;
+  background: linear-gradient(to bottom right, #BFBDF5 0%, #3B6EC7 100%);
+
+  .actualForecast_wrap{
+    color: white;
+    text-align: center;
+
+    .actualForecast_temp{
+      font-size: 80px;
+    }
+    .actualForecast_tempExtreme{
+      font-size: 20px;
+      opacity: 0.8;
+    }
+    .actualForecast_condition{
+      font-size: 25px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .actualForecast_more{
+      display: flex;
+      margin-top: 40px;
+      .actualForecast_more_item_wrap {
+        flex: 1;
+        text-align: center;
+        .actualForecast_more_item {
+          text-align: left;
+          display: inline-block;
+
+          span {
+            display: block;
+
+            &.actualForecast_more_item_info {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

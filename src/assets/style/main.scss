@@ -1,0 +1,17 @@
+// Import helpers
+
+@import './helpers/_variables.scss';
+@import './helpers/_texts.scss';
+
+// Import components
+
+@import './components/_header.scss';
+@import './components/_actualForecast.scss';
+
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background: $color-dark;
+}

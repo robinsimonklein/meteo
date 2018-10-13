@@ -1,0 +1,33 @@
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 20px 15px 0 15px;
+
+  .location_wrap{
+    display: inline-block;
+    .location{
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: $color-dark;
+      box-sizing: border-box;
+      border-radius: 50px;
+        .location-icon{
+          height: 22px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+        span{
+          vertical-align: top;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          display: inline-block;
+        }
+    }
+  }
+
+}
