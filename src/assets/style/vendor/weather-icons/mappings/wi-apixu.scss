@@ -1,0 +1,143 @@
+/*************
+*   NEUTRAL
+*************/
+
+.#{$wi-css-prefix}-apixu-day-1006:before,
+.#{$wi-css-prefix}-apixu-night-1006:before                     { content: $cloud                    ; }
+
+.#{$wi-css-prefix}-apixu-day-1009:before,
+.#{$wi-css-prefix}-apixu-night-1009:before                     { content: $cloudy                   ; }
+
+.#{$wi-css-prefix}-apixu-day-1117:before,
+.#{$wi-css-prefix}-apixu-night-1117:before                     { content: $snow-wind                ; }
+
+.#{$wi-css-prefix}-apixu-day-1135:before,
+.#{$wi-css-prefix}-apixu-night-1135:before,
+.#{$wi-css-prefix}-apixu-day-1147:before,
+.#{$wi-css-prefix}-apixu-night-1147:before                     { content: $fog                      ; }
+
+.#{$wi-css-prefix}-apixu-day-1153:before,
+.#{$wi-css-prefix}-apixu-night-1153:before,
+.#{$wi-css-prefix}-apixu-day-1168:before,
+.#{$wi-css-prefix}-apixu-night-1168:before,
+.#{$wi-css-prefix}-apixu-day-1171:before,
+.#{$wi-css-prefix}-apixu-night-1147:before                     { content: $sprinkle                 ; }
+
+.#{$wi-css-prefix}-apixu-day-1183:before,
+.#{$wi-css-prefix}-apixu-night-1183:before                     { content: $showers                  ; }
+
+.#{$wi-css-prefix}-apixu-day-1189:before,
+.#{$wi-css-prefix}-apixu-night-1189:before,
+.#{$wi-css-prefix}-apixu-day-1195:before,
+.#{$wi-css-prefix}-apixu-night-1195:before,
+.#{$wi-css-prefix}-apixu-day-1243:before,
+.#{$wi-css-prefix}-apixu-night-1243:before,
+.#{$wi-css-prefix}-apixu-day-1246:before,
+.#{$wi-css-prefix}-apixu-night-1246:before                     { content: $rain                     ; }
+
+.#{$wi-css-prefix}-apixu-day-1201:before,
+.#{$wi-css-prefix}-apixu-night-1201:before,
+.#{$wi-css-prefix}-apixu-day-1237:before,
+.#{$wi-css-prefix}-apixu-night-1237:before                     { content: $hail                     ; }
+
+.#{$wi-css-prefix}-apixu-day-1207:before,
+.#{$wi-css-prefix}-apixu-night-1207:before,
+.#{$wi-css-prefix}-apixu-day-1252:before,
+.#{$wi-css-prefix}-apixu-night-1252:before,
+.#{$wi-css-prefix}-apixu-day-1264:before,
+.#{$wi-css-prefix}-apixu-night-1264:before                     { content: $sleet                    ; }
+
+.#{$wi-css-prefix}-apixu-day-1213:before,
+.#{$wi-css-prefix}-apixu-night-1213:before,
+.#{$wi-css-prefix}-apixu-day-1219:before,
+.#{$wi-css-prefix}-apixu-night-1219:before,
+.#{$wi-css-prefix}-apixu-day-1225:before,
+.#{$wi-css-prefix}-apixu-night-1225:before                     { content: $snowflake-cold           ; }
+
+.#{$wi-css-prefix}-apixu-day-1258:before,
+.#{$wi-css-prefix}-apixu-night-1258:before                     { content: $snow                     ; }
+
+.#{$wi-css-prefix}-apixu-day-1276:before,
+.#{$wi-css-prefix}-apixu-night-1276:before                     { content: $thunderstorm             ; }
+
+/*************
+*   DAY
+*************/
+
+.#{$wi-css-prefix}-apixu-day-1000:before                     { content: $day-sunny                ; }
+
+.#{$wi-css-prefix}-apixu-day-1003:before                     { content: $day-cloudy               ; }
+
+.#{$wi-css-prefix}-apixu-day-1030:before                     { content: $day-fog                  ; }
+
+.#{$wi-css-prefix}-apixu-day-1063:before,
+.#{$wi-css-prefix}-apixu-day-1072:before,
+.#{$wi-css-prefix}-apixu-day-1150:before                     { content: $day-sprinkle             ; }
+
+.#{$wi-css-prefix}-apixu-day-1066:before,
+.#{$wi-css-prefix}-apixu-day-1210:before,
+.#{$wi-css-prefix}-apixu-day-1216:before,
+.#{$wi-css-prefix}-apixu-day-1255:before,
+.#{$wi-css-prefix}-apixu-day-1114:before                     { content: $day-snow                 ; }
+
+.#{$wi-css-prefix}-apixu-day-1069:before                     { content: $day-rain-mix             ; }
+
+.#{$wi-css-prefix}-apixu-day-1087:before                     { content: $day-lightning            ; }
+
+.#{$wi-css-prefix}-apixu-day-1180:before,
+.#{$wi-css-prefix}-apixu-day-1240:before                     { content: $day-showers              ; }
+
+.#{$wi-css-prefix}-apixu-day-1186:before,
+.#{$wi-css-prefix}-apixu-day-1192:before                     { content: $day-rain                 ; }
+
+.#{$wi-css-prefix}-apixu-day-1204:before,
+.#{$wi-css-prefix}-apixu-day-1261:before,
+.#{$wi-css-prefix}-apixu-day-1249:before                     { content: $day-sleet                ; }
+
+.#{$wi-css-prefix}-apixu-day-1222:before                     { content: $day-snow-wind            ; }
+
+.#{$wi-css-prefix}-apixu-day-1273:before                     { content: $day-thunderstorm         ; }
+
+.#{$wi-css-prefix}-apixu-day-1282:before,
+.#{$wi-css-prefix}-apixu-day-1279:before                     { content: $day-snow-thunderstorm    ; }
+
+/*************
+*   NIGHT
+*************/
+
+.#{$wi-css-prefix}-apixu-night-1000:before                     { content: $night-clear                ; }
+
+.#{$wi-css-prefix}-apixu-night-1003:before                     { content: $night-cloudy               ; }
+
+.#{$wi-css-prefix}-apixu-night-1030:before                     { content: $night-fog                  ; }
+
+.#{$wi-css-prefix}-apixu-night-1063:before,
+.#{$wi-css-prefix}-apixu-night-1072:before,
+.#{$wi-css-prefix}-apixu-night-1150:before                     { content: $night-sprinkle             ; }
+
+.#{$wi-css-prefix}-apixu-night-1066:before,
+.#{$wi-css-prefix}-apixu-night-1210:before,
+.#{$wi-css-prefix}-apixu-night-1216:before,
+.#{$wi-css-prefix}-apixu-night-1255:before,
+.#{$wi-css-prefix}-apixu-night-1114:before                     { content: $night-snow                 ; }
+
+.#{$wi-css-prefix}-apixu-night-1069:before                     { content: $night-rain-mix             ; }
+
+.#{$wi-css-prefix}-apixu-night-1087:before                     { content: $night-lightning            ; }
+
+.#{$wi-css-prefix}-apixu-night-1180:before,
+.#{$wi-css-prefix}-apixu-night-1240:before                     { content: $night-showers              ; }
+
+.#{$wi-css-prefix}-apixu-night-1186:before,
+.#{$wi-css-prefix}-apixu-night-1192:before                     { content: $night-rain                 ; }
+
+.#{$wi-css-prefix}-apixu-night-1204:before,
+.#{$wi-css-prefix}-apixu-night-1261:before,
+.#{$wi-css-prefix}-apixu-night-1249:before                     { content: $night-sleet                ; }
+
+.#{$wi-css-prefix}-apixu-night-1222:before                     { content: $night-snow-wind            ; }
+
+.#{$wi-css-prefix}-apixu-night-1273:before                     { content: $night-thunderstorm         ; }
+
+.#{$wi-css-prefix}-apixu-night-1282:before,
+.#{$wi-css-prefix}-apixu-night-1279:before                     { content: $night-snow-thunderstorm    ; }
