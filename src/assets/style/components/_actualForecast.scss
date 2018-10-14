@@ -1,6 +1,5 @@
 #actualForecast{
   padding: 100px 20px;
-  background: linear-gradient(to bottom right, #BFBDF5 0%, #3B6EC7 100%);
 
   .actualForecast_wrap{
     color: white;
@@ -58,3 +57,10 @@
     }
   }
 }
+
+.bg-sun{ background: $gradient-sun};
+.bg-cloud{ background: $gradient-cloud};
+.bg-rain{ background: $gradient-rain};
+.bg-snow{ background: $gradient-snow};
+.bg-storm{ background: $gradient-storm};
+.bg-night{ background: $gradient-night};

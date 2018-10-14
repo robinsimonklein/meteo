@@ -4,3 +4,12 @@ $color-dark: #212121;
 $color-light: rgba(255, 255, 255, 0.06);
 $color-hot: #ff6d22;
 $color-cold: #6ab8ff;
+
+// Gradients
+
+$gradient-sun: linear-gradient(to bottom right, #FFF1D2 0%, #FCC39F 100%);
+$gradient-cloud: linear-gradient(to bottom right, #D1DCFF 0%, #FAD0C4 100%);
+$gradient-rain: linear-gradient(to bottom right, #C2E9FB 0%, #A1C4FD 100%);
+$gradient-snow: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);;
+$gradient-storm: linear-gradient(to bottom right, #8989BA 0%, #A7A6CB 100%);
+$gradient-night: linear-gradient(to bottom right, #BFBDF5 0%, #3B6EC7 100%);

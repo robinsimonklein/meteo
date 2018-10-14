@@ -28,20 +28,32 @@ const Forecast = {
          * CURRENT FORECAST
          */
 
-        const actualForecastEl = document.querySelector('#actualForecast');
+        const currentForecastEl = document.querySelector('#actualForecast');
+
+        // Changer de background en fonction des conditions
+
+        if(forecast.current.is_day === 0){
+            currentForecastEl.setAttribute('class', 'bg-night');
+        }else{
+            currentForecastEl.setAttribute('class', 'bg-sun');
+        }
 
 
-        actualForecastEl.querySelector('.actualForecast_icon').innerHTML = this.iconModel(forecast.current.is_day, forecast.current.condition.code);
+        // Insérer les datas dans les modules
 
-        actualForecastEl.querySelector('.actualForecast_temp').innerHTML = forecast.current.temp_c + this.tempUnit;
-        actualForecastEl.querySelector('.actualForecast_condition').innerHTML = forecast.current.condition.text;
 
-        actualForecastEl.querySelector('.actualForecast_wind .actualForecast_more_item_info').innerHTML = forecast.current.wind_kph +' '+ this.windUnit;
-        actualForecastEl.querySelector('.actualForecast_wind .actualForecast_more_item_legend').innerHTML = forecast.current.wind_dir;
 
-        actualForecastEl.querySelector('.actualForecast_humidity .actualForecast_more_item_info').innerHTML = forecast.current.humidity +' %';
+        currentForecastEl.querySelector('.actualForecast_icon').innerHTML = this.iconModel(forecast.current.is_day, forecast.current.condition.code);
 
-        actualForecastEl.querySelector('.actualForecast_rain .actualForecast_more_item_info').innerHTML = forecast.current.precip_mm + ' '+ this.precipUnit;
+        currentForecastEl.querySelector('.actualForecast_temp').innerHTML = forecast.current.temp_c + this.tempUnit;
+        currentForecastEl.querySelector('.actualForecast_condition').innerHTML = forecast.current.condition.text;
+
+        currentForecastEl.querySelector('.actualForecast_wind .actualForecast_more_item_info').innerHTML = forecast.current.wind_kph +' '+ this.windUnit;
+        currentForecastEl.querySelector('.actualForecast_wind .actualForecast_more_item_legend').innerHTML = forecast.current.wind_dir;
+
+        currentForecastEl.querySelector('.actualForecast_humidity .actualForecast_more_item_info').innerHTML = forecast.current.humidity +' %';
+
+        currentForecastEl.querySelector('.actualForecast_rain .actualForecast_more_item_info').innerHTML = forecast.current.precip_mm + ' '+ this.precipUnit;
 
         /**
          * DAYS FORECAST
