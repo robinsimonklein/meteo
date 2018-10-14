@@ -29,9 +29,9 @@
         <div class="uiLayout searchLayout">
             <div class="container">
                 <div class="uiLayout_header">
-                    <div class="search_wrap"><form method="get"><input type="search" class="search_field" placeholder="Rechercher" /></form></div>
+                    <div class="search_wrap"><form method="get"><input type="search" class="search_field scaleAnimation" placeholder="Rechercher" /></form></div>
                     <div class="btn_wrap btn-close_wrap">
-                        <div class="btn btn-close">
+                        <div class="btn btn-close scaleAnimation open">
                             <div class="btn-line btn-line_cross-1"></div>
                             <div class="btn-line btn-line_cross-2"></div>
                         </div>
@@ -39,7 +39,6 @@
                 </div>
                 <div class="search_results">
                     <div class="search_results_item">
-                        <span class="result-city"><span class="result-match">Gre</span>noble, <span class="result-country">France</span>&nbsp;</span>
                     </div>
                 </div>
             </div>
@@ -48,14 +47,18 @@
             <div class="container">
                 <div class="uiLayout_header"></div>
                 <div class="fav_new_wrap">
-                    <div class="fav_new">
-                        <span class="fav_name">Grenoble</span>
+                    <div class="fav_new_model">
+                        <span class="fav_name"></span>
+                        <div class="btn btn-add"><img src="img/icons/add.svg" /></div>
+                    </div>
+                    <div class="fav_new hidden">
+                        <span class="fav_name"></span>
                         <div class="btn btn-add"><img src="img/icons/add.svg" /></div>
                     </div>
                 </div>
                 <div class="fav_list">
-                    <div class="fav_list_item">
-                        <span class="fav_name">Grenoble</span>
+                    <div class="fav_list_item fav_list_item_model">
+                        <span class="fav_name"></span>
                         <div class="btn btn-remove"><img src="img/icons/trash.svg" /></div>
                     </div>
                 </div>

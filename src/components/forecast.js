@@ -1,3 +1,5 @@
+import EventManager from "../tools/eventManager";
+
 const Forecast = {
 
     tempUnit: '°C',
@@ -22,7 +24,12 @@ const Forecast = {
 
     displayForecast(forecast){
         // Afficher la ville des prévisions
-        document.querySelector('.location span').innerHTML = forecast.location.name;
+        const locationName = forecast.location.name;
+        document.querySelector('.location span').innerHTML = locationName;
+
+        // On met à jour le btn pour ajouter la ville aux favoris
+
+        EventManager.dispatchEvent(new CustomEvent('WA::UpdateNewFav', {detail: locationName}));
 
         /**
          * CURRENT FORECAST

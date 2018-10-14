@@ -24,3 +24,6 @@ npm run test
 ```
 npm run lint
 ```
+### Warning Important
+
+Please use HTTPS for GeoLocalisation. Browsers doesn't allow Geoloc on HTTP.

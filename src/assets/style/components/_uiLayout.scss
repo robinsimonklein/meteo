@@ -25,10 +25,23 @@ Search
  */
 
 .searchLayout{
-  visibility: hidden;
+  transform: translate3d(-100%, 0, 0);
+  transition: all 0.3s ease-in-out;
+
+  .scaleAnimation{
+    transform: scale3d(0.8, 0.8, 1);
+    transition:all 0.3s ease;
+  }
 
   &.visible{
-    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+
+    .scaleAnimation{
+
+      transform: scale3d(1, 1, 1);
+      transition:all 0.4s ease 0.1s;
+    }
   }
 
 
@@ -102,7 +115,13 @@ Search
    */
 
 .favLayout{
-  display: none;
+
+  transform: translate3d(100%, 0, 0);
+
+  &.visible{
+    transform: translate3d(0, 0,0);
+    transition: all 0.3s ease-in-out;
+  }
 
   z-index: 9;
 
@@ -124,6 +143,14 @@ Search
       color: white;
       font-weight: bold;
       font-size: 18px;
+
+      &_model{
+        display: none;
+      }
+
+      &.hidden{
+        display: none;
+      }
       .fav_name{
         max-width: 100%;
         overflow: hidden;
@@ -145,6 +172,9 @@ Search
 
   .fav_list{
     padding: 0 15px;
+    max-height: calc(100vh - 122px);
+    overflow: auto;
+
 
     .fav_list_item{
       display: flex;
@@ -156,6 +186,10 @@ Search
       border-top: 1px solid $color-light;
       color: white;
       font-size: 18px;
+
+      &_model{
+        display: none;
+      }
 
       &:first-child{
         border-top: none;

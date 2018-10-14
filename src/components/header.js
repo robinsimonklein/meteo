@@ -11,6 +11,9 @@ const Header = {
         this.locationBtn.addEventListener('click', (e) => {
             EventManager.dispatchEvent(new CustomEvent('WA::OpenSearchEngine', {detail: e}));
         });
+        this.favBtn.addEventListener('click', (e) => {
+            EventManager.dispatchEvent(new CustomEvent('WA::OpenFavourites', {detail: e}));
+        });
     }
 };
 export default Header;

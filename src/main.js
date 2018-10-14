@@ -7,6 +7,7 @@ import App from './App.vue';
 
 import Header from './components/header';
 import SearchEngine from './components/search';
+import FavouriteList from './components/fav';
 
 // eslint-disable-next-line
 import CurrentPosition from './components/geoloc';
@@ -19,6 +20,7 @@ const WeatherApp = {
     init(){
         Header.init();
         SearchEngine.init();
+        FavouriteList.init();
         CurrentPosition.getPosition();
     }
 };

@@ -62,6 +62,27 @@ header{
     height: $btn-menu-size;
     Width: $btn-menu-size;
     position:relative;
+
+    &.open{
+      .btn-line_burger-1{
+        display: none;
+
+      }
+      .btn-line_burger-2{
+        display: none;
+
+      }
+      .btn-line_cross-1{
+        display: inherit;
+
+      }
+      .btn-line_cross-2{
+        display: inherit;
+
+      }
+
+    }
+
     .btn-line{
       $btn-line-height: 4px;
       height: $btn-line-height;
@@ -83,12 +104,15 @@ header{
         top: $btn-menu-size/2 - $btn-line-height/2;
         transform:rotate3d(0,0,1,45deg);
         background-color: white;
+        display: none;
       }
       &_cross-2{
         top: $btn-menu-size/2 - $btn-line-height/2;
         transform:rotate3d(0,0,1,-45deg);
         background-color: white;
+        display: none;
       }
+
     }
   }
 }
