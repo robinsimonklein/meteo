@@ -4,35 +4,67 @@ const Forecast = {
     windUnit: 'km/h',
     precipUnit: 'mm',
 
+    daysTexts : ["Dim.","Lun.","Mar.","Mer.","Jeu.","Ven.","Sam."],
+
     apixuKey: 'eaec92b550f54883881122307180210',
+
+    iconModel(is_day, conditionCode){
+        let moment = '';
+
+        if(is_day === 0){
+            moment = 'night';
+        }else{
+            moment = 'day';
+        }
+
+        return '<i class="wi wi-apixu-'+moment+'-'+conditionCode+'"></i>';
+    },
 
     displayForecast(forecast){
         // Afficher la ville des prévisions
         document.querySelector('.location span').innerHTML = forecast.location.name;
 
-        // Afficher la météo actuelle
-        const el = document.querySelector('.actualForecast_wrap');
+        /**
+         * CURRENT FORECAST
+         */
 
-        let moment = '';
+        const actualForecastEl = document.querySelector('#actualForecast');
 
-        if(forecast.current.is_day === 0){
-            moment = 'night';
-        }else{
-            moment = 'day';
+
+        actualForecastEl.querySelector('.actualForecast_icon').innerHTML = this.iconModel(forecast.current.is_day, forecast.current.condition.code);
+
+        actualForecastEl.querySelector('.actualForecast_temp').innerHTML = forecast.current.temp_c + this.tempUnit;
+        actualForecastEl.querySelector('.actualForecast_condition').innerHTML = forecast.current.condition.text;
+
+        actualForecastEl.querySelector('.actualForecast_wind .actualForecast_more_item_info').innerHTML = forecast.current.wind_kph +' '+ this.windUnit;
+        actualForecastEl.querySelector('.actualForecast_wind .actualForecast_more_item_legend').innerHTML = forecast.current.wind_dir;
+
+        actualForecastEl.querySelector('.actualForecast_humidity .actualForecast_more_item_info').innerHTML = forecast.current.humidity +' %';
+
+        actualForecastEl.querySelector('.actualForecast_rain .actualForecast_more_item_info').innerHTML = forecast.current.precip_mm + ' '+ this.precipUnit;
+
+        /**
+         * DAYS FORECAST
+         */
+        const dayForecastEl = document.querySelector('#dayForecast');
+        const dayForecastItems = dayForecastEl.querySelectorAll('.dayForecast_item');
+
+
+        for(let i = 0; i < 6; i+=1){
+
+            const dayDate = new Date(forecast.forecast.forecastday[i+1].date);
+
+            dayForecastItems[i].querySelector('.dayForecast_item_day span').innerHTML = this.daysTexts[dayDate.getDay()];
+            dayForecastItems[i].querySelector('.dayForecast_item_icon').innerHTML = this.iconModel(1, forecast.forecast.forecastday[i+1].day.condition.code);
+
+
+            dayForecastItems[i].querySelector('.dayForecast_item_temp-max').innerHTML = forecast.forecast.forecastday[i+1].day.maxtemp_c + '°C';
+            dayForecastItems[i].querySelector('.dayForecast_item_temp-min').innerHTML = forecast.forecast.forecastday[i+1].day.mintemp_c + '°C';
+
+            console.log(dayForecastItems[i]);
+            console.log(forecast.forecast.forecastday[i+1]);
         }
-        let iconModel = '<i class="wi wi-apixu-'+moment+'-'+forecast.current.condition.code+'"></i>'
 
-        el.querySelector('.actualForecast_icon').innerHTML = iconModel;
-
-        el.querySelector('.actualForecast_temp').innerHTML = forecast.current.temp_c + this.tempUnit;
-        el.querySelector('.actualForecast_condition').innerHTML = forecast.current.condition.text;
-
-        el.querySelector('.actualForecast_wind .actualForecast_more_item_info').innerHTML = forecast.current.wind_kph +' '+ this.windUnit;
-        el.querySelector('.actualForecast_wind .actualForecast_more_item_legend').innerHTML = forecast.current.wind_dir;
-
-        el.querySelector('.actualForecast_humidity .actualForecast_more_item_info').innerHTML = forecast.current.humidity +' %';
-
-        el.querySelector('.actualForecast_rain .actualForecast_more_item_info').innerHTML = forecast.current.precip_mm + ' '+ this.precipUnit;
     },
 
 

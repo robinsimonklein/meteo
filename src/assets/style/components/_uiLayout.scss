@@ -11,17 +11,19 @@
   background-color: $color-dark;
 
 }
+.uiLayout_header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
 
 .searchLayout{
   display: none;
 
-  .uiLayout_header{
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
+
 
     .search_wrap{
       width: 100%;
@@ -82,6 +84,82 @@
       .result-postal{
         opacity: 0.4;
         color: #eee;
+      }
+    }
+  }
+.favLayout{
+  display: none;
+
+  z-index: 9;
+
+  .fav_new_wrap{
+    padding: 0 15px;
+    margin: 10px 0;
+
+    .fav_new{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 10px;
+
+      border-radius: 10px;
+      background-color: $color-light;
+
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      .fav_name{
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 15px;
+      }
+
+      .btn-add{
+        padding: 0 10px;
+        box-sizing: border-box;
+        font-size: 0;
+        img{
+          height: 15px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+
+  .fav_list{
+    padding: 0 15px;
+
+    .fav_list_item{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 10px;
+      border-top: 1px solid $color-light;
+      color: white;
+      font-size: 18px;
+
+      &:first-child{
+        border-top: none;
+      }
+      .fav_name{
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 15px;
+      }
+      .btn-remove{
+        display: inline-block;
+        font-size: 0;
+        img{
+          height: 18px;
+          opacity: 0.6;
+        }
+
       }
     }
   }
