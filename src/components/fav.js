@@ -43,7 +43,6 @@ const FavoutiteList = {
     addItem(e){
         const favItem = new FavItem();
         favItem.build(e.detail);
-        console.log('test');
         this.el.appendChild(favItem.el);
 
     },
@@ -65,7 +64,6 @@ const FavouriteNew = {
     },
 
     update(e){
-        console.log(this.el);
         this.name.innerHTML = e.detail;
         this.el.querySelector('.btn-add').addEventListener('click', (e) => this.add(e, this.el));
         this.el.classList.remove('hidden');
