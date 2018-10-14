@@ -41,10 +41,18 @@ const FavoutiteList = {
     },
 
     addItem(e){
-        const favItem = new FavItem();
-        favItem.build(e.detail);
-        this.el.appendChild(favItem.el);
-
+        const existant = document.querySelectorAll('.fav_list .fav_name');
+        let repeat = false;
+        for (let item of existant){
+            if(item.innerHTML === e.detail){
+                repeat = true;
+            }
+        }
+        if(repeat != true) {
+            const favItem = new FavItem();
+            favItem.build(e.detail);
+            this.el.appendChild(favItem.el);
+        }
     },
 
 };
@@ -59,7 +67,7 @@ const FavouriteNew = {
         FavouriteLayout.init();
 
         this.name = this.el.querySelector('.fav_name');
-        //this.el.classList.add('hidden');
+        this.el.classList.add('hidden');
         EventManager.addEventListener('WA::UpdateNewFav', (event => this.update(event)));
     },
 
