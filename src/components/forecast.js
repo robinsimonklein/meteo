@@ -73,16 +73,14 @@ const Forecast = {
             dayForecastItems[i].querySelector('.dayForecast_item_temp-max').innerHTML = forecast.forecast.forecastday[i+1].day.maxtemp_c + '°C';
             dayForecastItems[i].querySelector('.dayForecast_item_temp-min').innerHTML = forecast.forecast.forecastday[i+1].day.mintemp_c + '°C';
 
-            console.log(dayForecastItems[i]);
-            console.log(forecast.forecast.forecastday[i+1]);
         }
 
     },
 
 
-    getForecast(latitude, longitude){
+    getForecast(data){
         let fcDatas = {};
-        const url = 'http://api.apixu.com/v1/forecast.json?key='+this.apixuKey+'&lang=fr&days=7&q='+latitude+','+longitude;
+        const url = 'http://api.apixu.com/v1/forecast.json?key='+this.apixuKey+'&lang=fr&days=7&q='+data;
         //const url = 'http://api.apixu.com/v1/forecast.json?key='+this.apixuKey+'&lang=fr&days=5&q=45.45,4.3';
         let fcRequest = new XMLHttpRequest();
         fcRequest.open('GET', url, true);

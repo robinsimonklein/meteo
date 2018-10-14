@@ -20,8 +20,16 @@
   padding: 0 15px;
 }
 
+/**
+Search
+ */
+
 .searchLayout{
-  display: none;
+  visibility: hidden;
+
+  &.visible{
+    visibility: visible;
+  }
 
 
 
@@ -87,6 +95,12 @@
       }
     }
   }
+
+  /**
+
+  Favourites
+   */
+
 .favLayout{
   display: none;
 
