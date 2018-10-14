@@ -11,33 +11,115 @@
 
     <main>
         <header>
-            <div class="location_wrap"><div class="location"><img src="./img/icons/location.svg" class="location-icon"/><span>Localisation...</span></div></div>
+            <div class="location_wrap">
+                <div class="location">
+                    <img src="./img/icons/location.svg" class="location-icon"/>
+                    <span>Localisation...</span>
+                </div>
+            </div>
+            <div class="btn-menu_wrap">
+                <div class="btn btn-menu">
+                    <div class="btn-line btn-line_burger-1"></div>
+                    <div class="btn-line btn-line_burger-2"></div>
+                    <div class="btn-line btn-line_cross-1"></div>
+                    <div class="btn-line btn-line_cross-2"></div>
+                </div>
+            </div>
         </header>
+        <div class="uiLayout searchLayout">
+            <div class="uiLayout_header">
+                <input type="text" class="search_field" placeholder="Rechercher" />
+                <div class="btn_wrap btn-close_wrap">
+                    <div class="btn btn-close">
+                        <div class="btn-line btn-line_cross-1"></div>
+                        <div class="btn-line btn-line_cross-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section id="actualForecast">
-            <div class="actualForecast_wrap">
-                <div class="actualForecast_icon"><img /></div>
-                <div class="actualForecast_temp temp">...°C</div>
-                <!-- <div class="actualForecast_tempExtreme"><span class="actualForecast_temp-min">...°C</span>|<span class="actualForecast_temp-max">...°C</span></div> -->
-                <div class="actualForecast_condition">...</div>
-                <div class="actualForecast_more">
-                    <div class="actualForecast_more_item_wrap">
-                        <div class="actualForecast_wind actualForecast_more_item">
-                            <span class="actualForecast_more_item_info">...</span>
-                            <span class="actualForecast_more_item_legend">...</span>
+            <div class="container">
+                <div class="actualForecast_wrap">
+                    <div class="actualForecast_icon"><i class="wi wi-apixu-day-1000"></i></div>
+                    <div class="actualForecast_temp temp">...°C</div>
+                    <div class="actualForecast_condition">...</div>
+                    <div class="actualForecast_more">
+                        <div class="actualForecast_more_item_wrap">
+                            <div class="actualForecast_more_icon"><i class="wi wi-strong-wind"></i></div>
+                            <div class="actualForecast_wind actualForecast_more_item">
+                                <span class="actualForecast_more_item_info">...</span>
+                                <span class="actualForecast_more_item_legend">...</span>
+                            </div>
+                        </div>
+                        <div class="actualForecast_more_item_wrap">
+                            <div class="actualForecast_more_icon"><i class="wi wi-humidity"></i></div>
+                            <div class="actualForecast_humidity actualForecast_more_item">
+                                <span class="actualForecast_more_item_info">...</span>
+                                <span class="actualForecast_more_item_legend">Humidité</span>
+
+                            </div>
+                        </div>
+                        <div class="actualForecast_more_item_wrap">
+                            <div class="actualForecast_more_icon"><i class="wi wi-umbrella"></i></div>
+                            <div class="actualForecast_rain actualForecast_more_item">
+                                <span class="actualForecast_more_item_info">...</span>
+                                <span class="actualForecast_more_item_legend">Pluie</span>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="actualForecast_more_item_wrap">
-                        <div class="actualForecast_humidity actualForecast_more_item">
-                            <span class="actualForecast_more_item_info">...</span>
-                            <span class="actualForecast_more_item_legend">Humidité</span>
-
+                </div>
+            </div>
+        </section>
+        <section id="dayForecast">
+            <div class="container">
+                <div class="dayForecast_wrap">
+                    <div class="dayForecast_item">
+                        <div class="dayForecast_item_day"><span>Lun.</span></div>
+                        <div class="dayForecast_item_icon"><i class="wi wi-apixu-day-1000"></i></div>
+                        <div class="dayForecast_item_temp">
+                            <span class="dayForecast_item_temp-max">28°C</span>
+                            <span class="dayForecast_item_temp-min">20°C</span>
                         </div>
                     </div>
-                    <div class="actualForecast_more_item_wrap">
-                        <div class="actualForecast_rain actualForecast_more_item">
-                            <span class="actualForecast_more_item_info">...</span>
-                            <span class="actualForecast_more_item_legend">Pluie</span>
-
+                    <div class="dayForecast_item">
+                        <div class="dayForecast_item_day"><span>Mar.</span></div>
+                        <div class="dayForecast_item_icon"><i class="wi wi-apixu-day-1000"></i></div>
+                        <div class="dayForecast_item_temp">
+                            <span class="dayForecast_item_temp-max">28°C</span>
+                            <span class="dayForecast_item_temp-min">20°C</span>
+                        </div>
+                    </div>
+                    <div class="dayForecast_item">
+                        <div class="dayForecast_item_day"><span>Mer.</span></div>
+                        <div class="dayForecast_item_icon"><i class="wi wi-apixu-day-1000"></i></div>
+                        <div class="dayForecast_item_temp">
+                            <span class="dayForecast_item_temp-max">28°C</span>
+                            <span class="dayForecast_item_temp-min">20°C</span>
+                        </div>
+                    </div>
+                    <div class="dayForecast_item">
+                        <div class="dayForecast_item_day"><span>Jeu.</span></div>
+                        <div class="dayForecast_item_icon"><i class="wi wi-apixu-day-1000"></i></div>
+                        <div class="dayForecast_item_temp">
+                            <span class="dayForecast_item_temp-max">28°C</span>
+                            <span class="dayForecast_item_temp-min">20°C</span>
+                        </div>
+                    </div>
+                    <div class="dayForecast_item">
+                        <div class="dayForecast_item_day"><span>Ven.</span></div>
+                        <div class="dayForecast_item_icon"><i class="wi wi-apixu-day-1000"></i></div>
+                        <div class="dayForecast_item_temp">
+                            <span class="dayForecast_item_temp-max">28°C</span>
+                            <span class="dayForecast_item_temp-min">20°C</span>
+                        </div>
+                    </div>
+                    <div class="dayForecast_item">
+                        <div class="dayForecast_item_day"><span>Sam.</span></div>
+                        <div class="dayForecast_item_icon"><i class="wi wi-apixu-day-1000"></i></div>
+                        <div class="dayForecast_item_temp">
+                            <span class="dayForecast_item_temp-max">28°C</span>
+                            <span class="dayForecast_item_temp-min">20°C</span>
                         </div>
                     </div>
                 </div>

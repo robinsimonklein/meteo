@@ -1,33 +1,94 @@
 header{
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
   width: 100%;
+  max-width: 1200px;
+  height: 60px;
+  z-index: 10;
   box-sizing: border-box;
+  transform: translate3d(-50%, 0, 0);
 
-  padding: 20px 15px 0 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 
-  .location_wrap{
-    display: inline-block;
-    .location{
+
+  padding: 0 15px;
+
+}
+.location_wrap {
+  width: 100%;
+  overflow: hidden;
+  padding-right: 15px;
+
+  font-size: 0;
+  .location {
+    box-sizing: border-box;
+    max-width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 7px 18px;
+    background-color: $color-dark;
+    border-radius: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .location-icon {
+      height: 17px;
       display: inline-block;
-      padding: 10px 20px;
-      background-color: $color-dark;
-      box-sizing: border-box;
-      border-radius: 50px;
-        .location-icon{
-          height: 22px;
-          display: inline-block;
-          margin-right: 10px;
-        }
-        span{
-          vertical-align: top;
-          color: white;
-          font-weight: bold;
-          font-size: 20px;
-          display: inline-block;
-        }
+      margin-right: 7px;
+    }
+    span {
+      display: inline-block;
+      color: white;
+      font-weight: bold;
+      font-size: 17px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
     }
   }
+}
+.btn_wrap{
 
+  .btn{
+    $btn-menu-size : 32px;
+
+    height: $btn-menu-size;
+    Width: $btn-menu-size;
+    position:relative;
+    .btn-line{
+      $btn-line-height: 4px;
+      height: $btn-line-height;
+      width: 100%;
+
+      position: absolute;
+      left: 0;
+
+      border-radius: 10px;
+      background-color: $color-dark;
+
+      &_burger-1{
+        top: $btn-menu-size/2 - $btn-line-height/2 - 5px;
+      }
+      &_burger-2{
+        top: $btn-menu-size/2 - $btn-line-height/2 + 5px;
+      }
+      &_cross-1{
+        top: $btn-menu-size/2 - $btn-line-height/2;
+        transform:rotate3d(0,0,1,45deg);
+        background-color: white;
+      }
+      &_cross-2{
+        top: $btn-menu-size/2 - $btn-line-height/2;
+        transform:rotate3d(0,0,1,-45deg);
+        background-color: white;
+      }
+    }
+  }
 }

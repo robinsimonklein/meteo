@@ -13,6 +13,17 @@ const Forecast = {
         // Afficher la météo actuelle
         const el = document.querySelector('.actualForecast_wrap');
 
+        let moment = '';
+
+        if(forecast.current.is_day === 0){
+            moment = 'night';
+        }else{
+            moment = 'day';
+        }
+        let iconModel = '<i class="wi wi-apixu-'+moment+'-'+forecast.current.condition.code+'"></i>'
+
+        el.querySelector('.actualForecast_icon').innerHTML = iconModel;
+
         el.querySelector('.actualForecast_temp').innerHTML = forecast.current.temp_c + this.tempUnit;
         el.querySelector('.actualForecast_condition').innerHTML = forecast.current.condition.text;
 
@@ -27,8 +38,8 @@ const Forecast = {
 
     getForecast(latitude, longitude){
         let fcDatas = {};
-        //const url = 'http://api.apixu.com/v1/current.json?key='+this.apixuKey+'&lang=fr&q='+latitude+','+longitude;
-        const url = 'http://api.apixu.com/v1/forecast.json?key='+this.apixuKey+'&lang=fr&days=5&q=45.45,4.3';
+        const url = 'http://api.apixu.com/v1/forecast.json?key='+this.apixuKey+'&lang=fr&days=7&q='+latitude+','+longitude;
+        //const url = 'http://api.apixu.com/v1/forecast.json?key='+this.apixuKey+'&lang=fr&days=5&q=45.45,4.3';
         let fcRequest = new XMLHttpRequest();
         fcRequest.open('GET', url, true);
         fcRequest.addEventListener('readystatechange', () => {

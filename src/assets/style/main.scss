@@ -7,11 +7,26 @@
 
 @import './components/_header.scss';
 @import './components/_actualForecast.scss';
+@import './components/_dayForecast.scss';
+@import './components/_uiLayout.scss';
 
 
+// Import vendors
+
+@import './vendor/weather-icons/weather-icons';
+
+
+*{
+  box-sizing: border-box;
+}
 
 body{
   margin: 0;
   padding: 0;
   background: $color-dark;
+}
+
+.container{
+  max-width: 800px;
+  margin: auto;
 }
